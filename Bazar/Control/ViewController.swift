@@ -23,8 +23,10 @@ class ViewController: UIViewController {
         
         productTableView.register(UINib(nibName: "ProductTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductCell")
         
-        fetchProducts(urlString: "https://fakestoreapi.com/products")
- 
+        ///https://www.fakeshop-api.com/docs#baseUrl
+        
+        let BaseURL = "https://fakestoreapi.com"
+        fetchProducts(urlString: BaseURL + "/products")
     }
     
     
@@ -35,7 +37,6 @@ class ViewController: UIViewController {
         
         let nextpage = CartViewController()
         navigationController?.pushViewController(nextpage, animated: true)
-        
     }
   
     
