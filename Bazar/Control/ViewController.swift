@@ -85,6 +85,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
         cell.productPrice.text = "$"+String(productModel[indexPath.row].price)
         cell.productImage.loadFrom(URLAddress: productModel[indexPath.row].image)
         
+        ///add target
         cell.addToCart.tag = indexPath.row
         cell.addToCart.addTarget(self, action: #selector(addCartBtnAction(_sender:)), for: UIControl.Event.touchUpInside)
 
