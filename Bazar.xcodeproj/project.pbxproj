@@ -79,9 +79,9 @@
 			children = (
 				114966D928D0668700A0214B /* AppDelegate.swift */,
 				114966DB28D0668700A0214B /* SceneDelegate.swift */,
+				114966F028D06A6500A0214B /* View */,
 				114966F628D0753300A0214B /* Model */,
 				114966F128D06A6F00A0214B /* Control */,
-				114966F028D06A6500A0214B /* View */,
 				114966E528D0668A00A0214B /* Assets.xcassets */,
 				114966E728D0668A00A0214B /* LaunchScreen.storyboard */,
 				114966EA28D0668A00A0214B /* Info.plist */,
@@ -103,8 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				114966DD28D0668700A0214B /* ViewController.swift */,
-				114966FB28D0983D00A0214B /* CartViewController.swift */,
 				114966F228D06A9000A0214B /* ProductTableViewCell.swift */,
+				114966FB28D0983D00A0214B /* CartViewController.swift */,
 			);
 			path = Control;
 			sourceTree = "<group>";

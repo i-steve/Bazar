@@ -97,6 +97,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
     @objc func addCartBtnAction(_sender :UIButton) {
         print(_sender.tag)
         let title = productModel[_sender.tag].title
+        print(title)
     }
 }
 
