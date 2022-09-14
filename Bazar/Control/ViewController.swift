@@ -92,13 +92,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     
-    
+    ///add-to-cart-pressed
     @objc func addCartBtnAction(_sender :UIButton) {
+        print(_sender.tag)
         let title = productModel[_sender.tag].title
-        
-        cartModel.append(contentsOf: title)
-        cartModel.append(contentsOf: pr)
-
     }
 }
 

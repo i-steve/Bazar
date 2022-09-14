@@ -28,8 +28,5 @@ class ProductTableViewCell: UITableViewCell {
     }
     
     
-    ///add-to-cart
-    @IBAction func addToCartPressed(_ sender: Any) {
-        print(sender)
-    }
+    
 }
