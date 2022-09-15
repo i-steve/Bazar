@@ -20,7 +20,7 @@ class CartViewController: UIViewController {
         cartTableView.dataSource = self
         cartTableView.delegate = self
 
-        cartTableView.register(UINib(nibName: "ProductTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductCell")
+        cartTableView.register(UINib(nibName: "CartTableViewCell", bundle: nil), forCellReuseIdentifier: "CartCell")
         
     }
     
@@ -42,9 +42,10 @@ extension CartViewController: UITableViewDataSource, UITableViewDelegate{
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = cartTableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as! ProductTableViewCell
+        let cell = cartTableView.dequeueReusableCell(withIdentifier: "CartCell", for: indexPath) as! CartTableViewCell
         
-        
+        cell.cartNameLabel.text = "iPhone 14"
+        cell.cartPriceLabel.text = "$"+"899"
 
         return cell
     }

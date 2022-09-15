@@ -20,6 +20,8 @@
 		114966FA28D0883C00A0214B /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114966F928D0883C00A0214B /* ProductModel.swift */; };
 		114966FC28D0983D00A0214B /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114966FB28D0983D00A0214B /* CartViewController.swift */; };
 		11DCCF8B28D309E500EF30F6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DCCF8A28D309E500EF30F6 /* DetailViewController.swift */; };
+		11DCCF8E28D34C9700EF30F6 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DCCF8C28D34C9700EF30F6 /* CartTableViewCell.swift */; };
+		11DCCF8F28D34C9700EF30F6 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11DCCF8D28D34C9700EF30F6 /* CartTableViewCell.xib */; };
 		24A19ACE83DDBC9280C479AA /* Pods_Bazar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 148ADB03C100D4725A0D460D /* Pods_Bazar.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,8 @@
 		114966F928D0883C00A0214B /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		114966FB28D0983D00A0214B /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		11DCCF8A28D309E500EF30F6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		11DCCF8C28D34C9700EF30F6 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		11DCCF8D28D34C9700EF30F6 /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		148ADB03C100D4725A0D460D /* Pods_Bazar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bazar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D357FC7E2BCF1358C874209 /* Pods-Bazar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bazar.debug.xcconfig"; path = "Target Support Files/Pods-Bazar/Pods-Bazar.debug.xcconfig"; sourceTree = "<group>"; };
 		8B368C4FDEC92FE550559C70 /* Pods-Bazar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bazar.release.xcconfig"; path = "Target Support Files/Pods-Bazar/Pods-Bazar.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 			children = (
 				114966DF28D0668700A0214B /* Main.storyboard */,
 				114966F328D06A9000A0214B /* ProductTableViewCell.xib */,
+				11DCCF8D28D34C9700EF30F6 /* CartTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				114966DD28D0668700A0214B /* ViewController.swift */,
+				11DCCF8C28D34C9700EF30F6 /* CartTableViewCell.swift */,
 				11DCCF8A28D309E500EF30F6 /* DetailViewController.swift */,
 				114966F228D06A9000A0214B /* ProductTableViewCell.swift */,
 				114966FB28D0983D00A0214B /* CartViewController.swift */,
@@ -196,6 +202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11DCCF8F28D34C9700EF30F6 /* CartTableViewCell.xib in Resources */,
 				114966E928D0668A00A0214B /* LaunchScreen.storyboard in Resources */,
 				114966F528D06A9000A0214B /* ProductTableViewCell.xib in Resources */,
 				114966E628D0668A00A0214B /* Assets.xcassets in Resources */,
@@ -259,6 +266,7 @@
 				114966FC28D0983D00A0214B /* CartViewController.swift in Sources */,
 				114966E428D0668700A0214B /* Bazar.xcdatamodeld in Sources */,
 				11DCCF8B28D309E500EF30F6 /* DetailViewController.swift in Sources */,
+				11DCCF8E28D34C9700EF30F6 /* CartTableViewCell.swift in Sources */,
 				114966FA28D0883C00A0214B /* ProductModel.swift in Sources */,
 				114966DC28D0668700A0214B /* SceneDelegate.swift in Sources */,
 			);
