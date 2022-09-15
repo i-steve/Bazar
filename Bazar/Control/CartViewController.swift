@@ -17,6 +17,8 @@ class CartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("cart -> \(cartArrayProductId)")
+        
 //        cartTableView.dataSource = self
 //        cartTableView.delegate = self
 //
@@ -30,18 +32,18 @@ class CartViewController: UIViewController {
 
 
 // MARK: - Delegate,DataSource
-//extension CartViewController: UITableViewDataSource, UITableViewDelegate{
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 10
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//
-//        let cell = cartTableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as! ProductTableViewCell
-//
-//        return cell
-//    }
-//
-//}
+extension CartViewController: UITableViewDataSource, UITableViewDelegate{
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        let cell = cartTableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as! ProductTableViewCell
+
+        return cell
+    }
+
+}
     

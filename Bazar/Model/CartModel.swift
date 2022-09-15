@@ -8,11 +8,9 @@
 import Foundation
 
 class CartModel{
+    var id: Int = 0
     var title: String = ""
     var price: Double = 0.0
     var image: String = ""
 }
 
-class Cart{
-    var cartArray = [CartModel()]
-}

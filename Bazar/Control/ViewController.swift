@@ -37,8 +37,8 @@ class ViewController: UIViewController {
     ///cart-btn-pressed
     @IBAction func cartBtnPressed(_ sender: UIButton) {
         
-        let nextpage = CartViewController()
-        navigationController?.pushViewController(nextpage, animated: true)
+        let cartPage = self.storyboard?.instantiateViewController(withIdentifier:"CartViewController" ) as! CartViewController
+        self.present(cartPage, animated: true, completion: nil)
     }
   
     
@@ -95,14 +95,29 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+      
+        let detailPage = self.storyboard?.instantiateViewController(withIdentifier:"DetailViewController" ) as! DetailViewController
+        self.present(detailPage, animated: true, completion: nil)
+        
+        detailPage.detailImage.loadFrom(URLAddress: productModel[indexPath.row].image)
+        detailPage.detailProductNameLabel.text = productModel[indexPath.row].title
+        detailPage.detailProductPriceLabel.text = "$"+String(productModel[indexPath.row].price)
+        detailPage.detailProductDescriptionLabel.text = productModel[indexPath.row].description
+        
+    }
     
-    ///add-to-cart-pressed
+    
+    
+    
+    ///add-to-cart
     @objc func addCartBtnAction(_sender :UIButton) {
         //print(_sender.tag)
         let id = productModel[_sender.tag].id
+        
         cartArrayProductId.append(id)
         print(cartArrayProductId)
-        
     }
 }
 
