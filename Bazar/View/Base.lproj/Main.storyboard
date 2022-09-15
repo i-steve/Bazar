@@ -38,8 +38,8 @@
                                     <action selector="cartBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fDT-Zh-O1h"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0hh-iA-7Ph">
-                                <rect key="frame" x="0.0" y="104" width="424" height="792"/>
+                            <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0hh-iA-7Ph">
+                                <rect key="frame" x="0.0" y="104" width="414" height="792"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -52,7 +52,7 @@
                             <constraint firstItem="0hh-iA-7Ph" firstAttribute="top" secondItem="U3E-fg-2zG" secondAttribute="top" constant="60" id="eR7-nq-mDL"/>
                             <constraint firstItem="VxG-Y2-vsa" firstAttribute="centerY" secondItem="agN-Kj-AQR" secondAttribute="centerY" id="gNZ-oy-NyV"/>
                             <constraint firstItem="VxG-Y2-vsa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="agN-Kj-AQR" secondAttribute="trailing" constant="128" id="gtV-OI-zmp"/>
-                            <constraint firstItem="0hh-iA-7Ph" firstAttribute="trailing" secondItem="U3E-fg-2zG" secondAttribute="trailing" constant="10" id="tfW-8k-gYk"/>
+                            <constraint firstItem="0hh-iA-7Ph" firstAttribute="trailing" secondItem="U3E-fg-2zG" secondAttribute="trailing" id="tfW-8k-gYk"/>
                             <constraint firstItem="0hh-iA-7Ph" firstAttribute="top" secondItem="agN-Kj-AQR" secondAttribute="bottom" constant="20" id="yJ6-sE-Kgs"/>
                             <constraint firstItem="0hh-iA-7Ph" firstAttribute="leading" secondItem="U3E-fg-2zG" secondAttribute="leading" id="zcM-iy-OSd"/>
                         </constraints>

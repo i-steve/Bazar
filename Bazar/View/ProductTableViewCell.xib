@@ -41,7 +41,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVl-gU-Jn2">
-                                <rect key="frame" x="387" y="55" width="80" height="26"/>
+                                <rect key="frame" x="371" y="55" width="80" height="26"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="TUo-VG-N02"/>
@@ -61,7 +61,7 @@
                             <constraint firstAttribute="trailing" secondItem="xQa-sv-qE7" secondAttribute="trailing" constant="10" id="3Jk-0h-8mU"/>
                             <constraint firstItem="A2h-F1-d0j" firstAttribute="leading" secondItem="xQa-sv-qE7" secondAttribute="leading" id="A1Z-wf-3ut"/>
                             <constraint firstItem="EfS-mm-1kE" firstAttribute="leading" secondItem="ibx-ii-eP5" secondAttribute="leading" constant="16" id="LJ4-hY-fJY"/>
-                            <constraint firstAttribute="trailing" secondItem="NVl-gU-Jn2" secondAttribute="trailing" constant="10" id="aFA-rv-9IS"/>
+                            <constraint firstAttribute="trailing" secondItem="NVl-gU-Jn2" secondAttribute="trailing" constant="26" id="aFA-rv-9IS"/>
                             <constraint firstItem="NVl-gU-Jn2" firstAttribute="bottom" secondItem="A2h-F1-d0j" secondAttribute="bottom" id="avq-mC-bTl"/>
                             <constraint firstItem="A2h-F1-d0j" firstAttribute="top" secondItem="xQa-sv-qE7" secondAttribute="bottom" constant="16" id="bAC-ed-cNv"/>
                             <constraint firstItem="xQa-sv-qE7" firstAttribute="top" secondItem="ibx-ii-eP5" secondAttribute="top" constant="24" id="qfI-CL-81u"/>
