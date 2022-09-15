@@ -19,7 +19,6 @@
 		114966F828D0755D00A0214B /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114966F728D0755D00A0214B /* Parser.swift */; };
 		114966FA28D0883C00A0214B /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114966F928D0883C00A0214B /* ProductModel.swift */; };
 		114966FC28D0983D00A0214B /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114966FB28D0983D00A0214B /* CartViewController.swift */; };
-		114966FE28D0B0DF00A0214B /* CartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114966FD28D0B0DF00A0214B /* CartModel.swift */; };
 		11DCCF8B28D309E500EF30F6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DCCF8A28D309E500EF30F6 /* DetailViewController.swift */; };
 		24A19ACE83DDBC9280C479AA /* Pods_Bazar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 148ADB03C100D4725A0D460D /* Pods_Bazar.framework */; };
 /* End PBXBuildFile section */
@@ -39,7 +38,6 @@
 		114966F728D0755D00A0214B /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		114966F928D0883C00A0214B /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		114966FB28D0983D00A0214B /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
-		114966FD28D0B0DF00A0214B /* CartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartModel.swift; sourceTree = "<group>"; };
 		11DCCF8A28D309E500EF30F6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		148ADB03C100D4725A0D460D /* Pods_Bazar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bazar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D357FC7E2BCF1358C874209 /* Pods-Bazar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bazar.debug.xcconfig"; path = "Target Support Files/Pods-Bazar/Pods-Bazar.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 			children = (
 				114966F728D0755D00A0214B /* Parser.swift */,
 				114966F928D0883C00A0214B /* ProductModel.swift */,
-				114966FD28D0B0DF00A0214B /* CartModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -255,7 +252,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				114966FE28D0B0DF00A0214B /* CartModel.swift in Sources */,
 				114966DE28D0668700A0214B /* ViewController.swift in Sources */,
 				114966DA28D0668700A0214B /* AppDelegate.swift in Sources */,
 				114966F828D0755D00A0214B /* Parser.swift in Sources */,

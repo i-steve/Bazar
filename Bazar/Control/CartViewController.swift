@@ -9,8 +9,6 @@ import UIKit
 
 class CartViewController: UIViewController {
     
-//    var cartModel = CartModel()
-    
     @IBOutlet weak var emptyLabel: UILabel!
     
     @IBOutlet weak var cartTableView: UITableView!
@@ -19,11 +17,15 @@ class CartViewController: UIViewController {
         
         print("cart -> \(cartArrayProductId)")
         
-//        cartTableView.dataSource = self
-//        cartTableView.delegate = self
-//
-//        cartTableView.register(UINib(nibName: "ProductTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductCell")
+        cartTableView.dataSource = self
+        cartTableView.delegate = self
+
+        cartTableView.register(UINib(nibName: "ProductTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductCell")
         
+    }
+    
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        dismiss(animated: true)
     }
     
 }
@@ -35,12 +37,14 @@ class CartViewController: UIViewController {
 extension CartViewController: UITableViewDataSource, UITableViewDelegate{
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return cartArrayProductId.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = cartTableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as! ProductTableViewCell
+        
+        
 
         return cell
     }
