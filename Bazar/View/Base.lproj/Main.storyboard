@@ -34,7 +34,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="20" weight="semibold"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="cartBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MCx-AQ-c2z"/>
+                                    <action selector="cartBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fDT-Zh-O1h"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,40 +61,60 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="300" y="111.83035714285714"/>
+            <point key="canvasLocation" x="298.55072463768118" y="111.83035714285714"/>
         </scene>
         <!--Cart View Controller-->
         <scene sceneID="YFF-Zd-nVV">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="k2F-jH-0Bd" customClass="CartViewController" customModule="Bazar" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="s6i-jk-m5r" customClass="cart">
+                    <view key="view" contentMode="scaleToFill" id="s6i-jk-m5r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tk9-vA-edD">
-                                <rect key="frame" x="0.0" y="98" width="414" height="464"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dfj-Wv-Eh8">
                                 <rect key="frame" x="181" y="49" width="52" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                 <color key="textColor" red="0.23137254900000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DEk-Lw-Z7i">
+                                <rect key="frame" x="0.0" y="78" width="414" height="784"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SnB-FL-NgM">
+                                        <rect key="frame" x="0.0" y="370" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="94M-Bj-OYJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="484"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="94M-Bj-OYJ" firstAttribute="top" secondItem="DEk-Lw-Z7i" secondAttribute="top" id="KDS-Kc-AbR"/>
+                                    <constraint firstItem="94M-Bj-OYJ" firstAttribute="leading" secondItem="DEk-Lw-Z7i" secondAttribute="leading" id="ZCu-Ri-CsK"/>
+                                    <constraint firstAttribute="bottom" secondItem="94M-Bj-OYJ" secondAttribute="bottom" constant="300" id="hHV-9V-kTc"/>
+                                    <constraint firstAttribute="trailing" secondItem="94M-Bj-OYJ" secondAttribute="trailing" id="zys-La-CM8"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tpy-3V-D3o"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="tk9-vA-edD" firstAttribute="trailing" secondItem="tpy-3V-D3o" secondAttribute="trailing" id="6HV-vP-vQF"/>
-                            <constraint firstItem="tk9-vA-edD" firstAttribute="leading" secondItem="tpy-3V-D3o" secondAttribute="leading" id="Vy4-Ra-q0y"/>
+                            <constraint firstItem="DEk-Lw-Z7i" firstAttribute="leading" secondItem="tpy-3V-D3o" secondAttribute="leading" id="Ck1-KS-WRl"/>
+                            <constraint firstItem="DEk-Lw-Z7i" firstAttribute="top" secondItem="Dfj-Wv-Eh8" secondAttribute="bottom" id="Tq6-z0-n04"/>
                             <constraint firstItem="Dfj-Wv-Eh8" firstAttribute="top" secondItem="tpy-3V-D3o" secondAttribute="top" constant="5" id="aQE-ba-aHK"/>
+                            <constraint firstItem="DEk-Lw-Z7i" firstAttribute="trailing" secondItem="tpy-3V-D3o" secondAttribute="trailing" id="bni-TF-Ezj"/>
                             <constraint firstItem="Dfj-Wv-Eh8" firstAttribute="centerX" secondItem="tpy-3V-D3o" secondAttribute="centerX" id="gU5-et-F7M"/>
-                            <constraint firstItem="tk9-vA-edD" firstAttribute="top" secondItem="Dfj-Wv-Eh8" secondAttribute="bottom" constant="20" id="kHf-lw-i91"/>
-                            <constraint firstItem="tpy-3V-D3o" firstAttribute="bottom" secondItem="tk9-vA-edD" secondAttribute="bottom" constant="300" id="rJP-l9-9Ur"/>
+                            <constraint firstItem="tpy-3V-D3o" firstAttribute="bottom" secondItem="DEk-Lw-Z7i" secondAttribute="bottom" id="igV-DK-b1N"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="cartTableView" destination="tk9-vA-edD" id="Au8-YZ-UkZ"/>
+                        <outlet property="cartTableView" destination="94M-Bj-OYJ" id="EUD-oY-8dN"/>
+                        <outlet property="emptyLabel" destination="SnB-FL-NgM" id="ne8-so-wWM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CO3-uK-uQT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

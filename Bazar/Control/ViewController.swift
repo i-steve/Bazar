@@ -7,9 +7,13 @@
 
 import UIKit
 
+
 var productModel:[ProductModel] = [ProductModel]()
 
-var cartModel:[CartModel] = [CartModel]()
+var cartArrayProductId:[Int] = []
+
+let BaseURL = "https://fakestoreapi.com/"
+
 
 class ViewController: UIViewController {
     
@@ -25,11 +29,9 @@ class ViewController: UIViewController {
         
         ///https://www.fakeshop-api.com/docs#baseUrl
         
-        let BaseURL = "https://fakestoreapi.com"
-        fetchProducts(urlString: BaseURL + "/products")
+        
+        fetchProducts(urlString: BaseURL + "products")
     }
-    
-    
 
     
     ///cart-btn-pressed
@@ -40,8 +42,8 @@ class ViewController: UIViewController {
     }
   
     
-   ///fetchURL
-    func fetchProducts(urlString: String){
+
+   func fetchProducts(urlString: String){
         
         let url = URL(string: urlString)
         
@@ -96,9 +98,11 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
     
     ///add-to-cart-pressed
     @objc func addCartBtnAction(_sender :UIButton) {
-        print(_sender.tag)
-        let title = productModel[_sender.tag].title
-        print(title)
+        //print(_sender.tag)
+        let id = productModel[_sender.tag].id
+        cartArrayProductId.append(id)
+        print(cartArrayProductId)
+        
     }
 }
 
