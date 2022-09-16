@@ -9,8 +9,10 @@ import UIKit
 
 class CartViewController: UIViewController {
     
+    var productModel:[ProductModel] = [ProductModel]()
     
     @IBOutlet weak var cartTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,8 +45,9 @@ extension CartViewController: UITableViewDataSource, UITableViewDelegate{
 
         let cell = cartTableView.dequeueReusableCell(withIdentifier: "CartCell", for: indexPath) as! CartTableViewCell
         
-        cell.cartNameLabel.text = "iPhone 14"
-        cell.cartPriceLabel.text = "$"+"899"
+        cell.cartNameLabel.text = productModel[1].title
+        cell.cartPriceLabel.text = "$"+String(productModel[1].price)
+        cell.cartProductImage.loadFrom(URLAddress: productModel[1].image)
 
         return cell
     }

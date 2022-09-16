@@ -8,14 +8,13 @@
 import UIKit
 
 
-var productModel:[ProductModel] = [ProductModel]()
-
 var cartArrayProductId:[Int] = []
-
 let BaseURL = "https://fakestoreapi.com/"
 
 
 class ViewController: UIViewController {
+    
+    var productModel:[ProductModel] = [ProductModel]()
     
     @IBOutlet weak var productTableView: UITableView!
     
@@ -26,9 +25,6 @@ class ViewController: UIViewController {
         productTableView.delegate = self
         
         productTableView.register(UINib(nibName: "ProductTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductCell")
-        
-        ///https://www.fakeshop-api.com/docs#baseUrl
-        
         
         fetchProducts(urlString: BaseURL + "products")
     }
@@ -53,7 +49,7 @@ class ViewController: UIViewController {
                 do {
                     let JSON = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
                     
-                    productModel = Parser.ParseProduct(apiResponse: JSON as AnyObject)
+                    self.productModel = Parser.ParseProduct(apiResponse: JSON as AnyObject)
                     
                     DispatchQueue.main.async {
                         self.productTableView.reloadData()
@@ -76,9 +72,11 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
         return productModel.count
     }
     
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -95,9 +93,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
         return cell
     }
     
+    ///Detail-View
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-      
         let detailPage = self.storyboard?.instantiateViewController(withIdentifier:"DetailViewController" ) as! DetailViewController
         self.present(detailPage, animated: true, completion: nil)
         
@@ -115,9 +113,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
     @objc func addCartBtnAction(_sender :UIButton) {
         //print(_sender.tag)
         let id = productModel[_sender.tag].id
-        
         cartArrayProductId.append(id)
-        print(cartArrayProductId)
+        //print(cartArrayProductId)
     }
 }
 
