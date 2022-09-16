@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		111D98F828D43E0A00A4D415 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111D98F728D43E0A00A4D415 /* UIView.swift */; };
 		114966DA28D0668700A0214B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114966D928D0668700A0214B /* AppDelegate.swift */; };
 		114966DC28D0668700A0214B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114966DB28D0668700A0214B /* SceneDelegate.swift */; };
 		114966DE28D0668700A0214B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114966DD28D0668700A0214B /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		111D98F728D43E0A00A4D415 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		114966D628D0668700A0214B /* Bazar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bazar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		114966D928D0668700A0214B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		114966DB28D0668700A0214B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,9 +62,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		111D98F928D43E0E00A4D415 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				111D98F728D43E0A00A4D415 /* UIView.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		114966CD28D0668700A0214B = {
 			isa = PBXGroup;
 			children = (
+				111D98F928D43E0E00A4D415 /* Source */,
 				114966D828D0668700A0214B /* Bazar */,
 				114966D728D0668700A0214B /* Products */,
 				47B3D1D6207AF874E67A841E /* Pods */,
@@ -261,6 +272,7 @@
 			files = (
 				114966DE28D0668700A0214B /* ViewController.swift in Sources */,
 				114966DA28D0668700A0214B /* AppDelegate.swift in Sources */,
+				111D98F828D43E0A00A4D415 /* UIView.swift in Sources */,
 				114966F828D0755D00A0214B /* Parser.swift in Sources */,
 				114966F428D06A9000A0214B /* ProductTableViewCell.swift in Sources */,
 				114966FC28D0983D00A0214B /* CartViewController.swift in Sources */,

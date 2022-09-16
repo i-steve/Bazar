@@ -9,7 +9,6 @@ import UIKit
 
 class CartViewController: UIViewController {
     
-    @IBOutlet weak var emptyLabel: UILabel!
     
     @IBOutlet weak var cartTableView: UITableView!
     override func viewDidLoad() {

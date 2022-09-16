@@ -24,6 +24,6 @@ class DetailViewController: UIViewController {
     @IBAction func backBtnPressed(_ sender: UIButton) {
         dismiss(animated: true)
     }
-    
-
 }
+
+
