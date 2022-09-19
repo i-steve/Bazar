@@ -142,6 +142,30 @@
                                 <rect key="frame" x="0.0" y="98.5" width="414" height="503.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XZj-gD-krz">
+                                <rect key="frame" x="307.5" y="632" width="76.5" height="21.5"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="totalPrice">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="systemGreenColor"/>
+                                            <font key="NSFont" metaFont="system" size="18"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="systemOrangeColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tpy-3V-D3o"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -149,13 +173,16 @@
                             <constraint firstItem="E5Y-Dg-zo1" firstAttribute="leading" secondItem="tpy-3V-D3o" secondAttribute="leading" constant="10" id="71M-ik-WtX"/>
                             <constraint firstItem="hvw-Gk-jJ9" firstAttribute="top" secondItem="3v1-v7-J8a" secondAttribute="bottom" constant="180" id="8Wh-Z9-8kh"/>
                             <constraint firstItem="MgH-Xr-bhs" firstAttribute="leading" secondItem="s6i-jk-m5r" secondAttribute="leading" constant="404" id="AgB-0q-F7o"/>
+                            <constraint firstItem="XZj-gD-krz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hvw-Gk-jJ9" secondAttribute="leading" constant="60" id="J3Q-OX-gYS"/>
                             <constraint firstItem="hvw-Gk-jJ9" firstAttribute="centerX" secondItem="s6i-jk-m5r" secondAttribute="centerX" id="Mnr-IP-I8J"/>
                             <constraint firstItem="3v1-v7-J8a" firstAttribute="leading" secondItem="tpy-3V-D3o" secondAttribute="leading" id="QSG-6b-ziX"/>
                             <constraint firstItem="Dfj-Wv-Eh8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="E5Y-Dg-zo1" secondAttribute="trailing" constant="139.5" id="Wg4-pm-u04"/>
                             <constraint firstItem="tpy-3V-D3o" firstAttribute="bottom" secondItem="hvw-Gk-jJ9" secondAttribute="bottom" constant="40" id="YME-Pz-VAI"/>
+                            <constraint firstItem="XZj-gD-krz" firstAttribute="top" secondItem="3v1-v7-J8a" secondAttribute="bottom" constant="30" id="amX-2X-MbQ"/>
                             <constraint firstItem="MgH-Xr-bhs" firstAttribute="top" secondItem="Dfj-Wv-Eh8" secondAttribute="top" id="d8g-Jp-ool"/>
                             <constraint firstItem="Dfj-Wv-Eh8" firstAttribute="centerX" secondItem="s6i-jk-m5r" secondAttribute="centerX" id="eeX-Bz-y1b"/>
                             <constraint firstItem="tpy-3V-D3o" firstAttribute="trailing" secondItem="MgH-Xr-bhs" secondAttribute="trailing" constant="10" id="gJ6-py-D2L"/>
+                            <constraint firstItem="tpy-3V-D3o" firstAttribute="trailing" secondItem="XZj-gD-krz" secondAttribute="trailing" constant="30" id="j6T-dy-xgQ"/>
                             <constraint firstItem="E5Y-Dg-zo1" firstAttribute="centerY" secondItem="Dfj-Wv-Eh8" secondAttribute="centerY" id="k1p-YG-SyK"/>
                             <constraint firstItem="Dfj-Wv-Eh8" firstAttribute="top" secondItem="tpy-3V-D3o" secondAttribute="top" constant="5" id="lhs-38-nJc"/>
                             <constraint firstItem="3v1-v7-J8a" firstAttribute="trailing" secondItem="tpy-3V-D3o" secondAttribute="trailing" id="oon-av-9KG"/>
@@ -164,11 +191,12 @@
                     </view>
                     <connections>
                         <outlet property="cartTableView" destination="3v1-v7-J8a" id="U0J-VI-2P6"/>
+                        <outlet property="totalPriceLabel" destination="XZj-gD-krz" id="yfx-bW-VMO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CO3-uK-uQT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1138" y="-420"/>
+            <point key="canvasLocation" x="1137.68115942029" y="-420.53571428571428"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="983-AQ-epb">

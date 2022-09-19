@@ -12,6 +12,7 @@ class CartViewController: UIViewController {
     var cartModel: [ProductModel] = []
     
     @IBOutlet weak var cartTableView: UITableView!
+    @IBOutlet weak var totalPriceLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,8 @@ class CartViewController: UIViewController {
 
         cartTableView.register(UINib(nibName: "CartTableViewCell", bundle: nil), forCellReuseIdentifier: "CartCell")
         
+        let sumOfPrice = cartArrayProductPrice.reduce(0, +)
+        totalPriceLabel.text = "  Total - $\(String(sumOfPrice))  "
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
