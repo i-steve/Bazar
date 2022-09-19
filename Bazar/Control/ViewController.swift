@@ -8,13 +8,16 @@
 import UIKit
 
 
-var cartArrayProductId:[Int] = []
+var cartArrayProductTitle:[String] = []
+var cartArrayProductPrice:[Double] = []
+var cartArrayProductImage:[String] = []
+
 let BaseURL = "https://fakestoreapi.com/"
 
 
 class ViewController: UIViewController {
     
-    var productModel:[ProductModel] = [ProductModel]()
+    var productModel:[ProductModel] = []
     
     @IBOutlet weak var productTableView: UITableView!
     
@@ -112,9 +115,11 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
     ///add-to-cart
     @objc func addCartBtnAction(_sender :UIButton) {
         //print(_sender.tag)
-        let id = productModel[_sender.tag].id
-        cartArrayProductId.append(id)
-        //print(cartArrayProductId)
+        
+        cartArrayProductTitle.append(productModel[_sender.tag].title)
+        cartArrayProductPrice.append(productModel[_sender.tag].price)
+        cartArrayProductImage.append(productModel[_sender.tag].image)
+       
     }
 }
 

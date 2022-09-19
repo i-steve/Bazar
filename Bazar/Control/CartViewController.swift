@@ -9,14 +9,12 @@ import UIKit
 
 class CartViewController: UIViewController {
     
-    var productModel:[ProductModel] = [ProductModel]()
+    var cartModel: [ProductModel] = []
     
     @IBOutlet weak var cartTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("cart -> \(cartArrayProductId)")
         
         cartTableView.dataSource = self
         cartTableView.delegate = self
@@ -38,16 +36,16 @@ class CartViewController: UIViewController {
 extension CartViewController: UITableViewDataSource, UITableViewDelegate{
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cartArrayProductId.count
+        return cartArrayProductTitle.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = cartTableView.dequeueReusableCell(withIdentifier: "CartCell", for: indexPath) as! CartTableViewCell
         
-        cell.cartNameLabel.text = productModel[1].title
-        cell.cartPriceLabel.text = "$"+String(productModel[1].price)
-        cell.cartProductImage.loadFrom(URLAddress: productModel[1].image)
+        cell.cartNameLabel.text = cartArrayProductTitle[indexPath.row]
+        cell.cartPriceLabel.text = String(cartArrayProductPrice[indexPath.row])
+        cell.cartProductImage.loadFrom(URLAddress: cartArrayProductImage[indexPath.row])
 
         return cell
     }
