@@ -7,10 +7,12 @@
 
 import UIKit
 
+var cartProductDic: [String: Int] = [String: Int]()
+
 class CartViewController: UIViewController {
     
     var cartModel: [ProductModel] = []
-    
+
     @IBOutlet weak var cartTableView: UITableView!
     @IBOutlet weak var totalPriceLabel: UILabel!
     
@@ -22,14 +24,26 @@ class CartViewController: UIViewController {
 
         cartTableView.register(UINib(nibName: "CartTableViewCell", bundle: nil), forCellReuseIdentifier: "CartCell")
         
+        ///sum of price in cart
         let sumOfPrice = cartArrayProductPrice.reduce(0, +)
         totalPriceLabel.text = "  Total - $\(String(sumOfPrice))  "
+        
+        count()
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         dismiss(animated: true)
     }
     
+    func count(){
+        for product in cartArrayProductTitle{
+            if cartProductDic[product] == nil{
+                cartProductDic[product] = 1
+            }else{
+                cartProductDic[product]! += 1
+            }
+        }
+    }
 }
 
 
@@ -46,7 +60,9 @@ extension CartViewController: UITableViewDataSource, UITableViewDelegate{
 
         let cell = cartTableView.dequeueReusableCell(withIdentifier: "CartCell", for: indexPath) as! CartTableViewCell
         
-        cell.cartNameLabel.text = cartArrayProductTitle[indexPath.row]
+        let title = cartArrayProductTitle[indexPath.row]
+        
+        cell.cartNameLabel.text = title
         cell.cartPriceLabel.text = String(cartArrayProductPrice[indexPath.row])
         cell.cartProductImage.loadFrom(URLAddress: cartArrayProductImage[indexPath.row])
 
